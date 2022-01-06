@@ -14,11 +14,11 @@ class Client:
 		self.__is_running = False
 		if RUNNING:
 			self.run()
+		else:
+			print("WARNING: Client is not running")
 
 	def data_exchange(self):
 		"""
-		# Hello
-
 		:return:
 		"""
 		if not self.__is_running or not self.data:
@@ -36,6 +36,7 @@ class Client:
 			self.data += str(e) + "\n"
 
 	def run(self):
+		print("Client is running")
 		self.__is_running = True
 
 

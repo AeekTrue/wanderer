@@ -6,6 +6,7 @@ import pygame.draw
 
 import colors
 import config
+import images
 import utils
 import client
 from config import BTN_LEFT, BTN_RIGHT, BTN_UP, BTN_DOWN
@@ -44,7 +45,7 @@ class Obj(pygame.sprite.Sprite):
 
 class Tree(Obj):
 	def __init__(self, position, fd):
-		super(Tree, self).__init__(position, parent_field=fd, image=config.tree_img)
+		super(Tree, self).__init__(position, parent_field=fd, image=images.small_tree)
 
 	def update(self):
 		super(Tree, self).update()
@@ -108,7 +109,7 @@ class Human(Obj):
 
 class Hero(Human):
 	def __init__(self, fd):
-		super(Hero, self).__init__(utils.Point(fd.width // 2, fd.height // 2), fd, image=config.hero_img)
+		super(Hero, self).__init__(utils.Point(fd.width // 2, fd.height // 2), fd, image=images.hero)
 		self.rect.center = self.field.get_window_center().get()
 		self.rotation = utils.Vector(0, 1)
 		self.speed = HERO_SPEED

@@ -34,7 +34,7 @@ class Game:
 
 			if frames_cnt % (FPS // RPS) == 0:
 				response = client.data_exchange()
-				print("Response:", response)
+				# print("Response:", response)
 				frames_cnt = 0
 			self.update()
 

@@ -3,13 +3,6 @@ import os
 import pygame
 
 game_folder = os.path.dirname(__file__)
-img_folder = os.path.join(game_folder, 'img')
-
-tree_img = pygame.image.load(os.path.join(img_folder, 'small-tree.png'))
-tree_img = pygame.transform.scale(tree_img, (64, 128))
-
-hero_img = pygame.image.load(os.path.join(img_folder, 'snowman1.png'))
-hero_img = pygame.transform.scale(hero_img, (64, 64))
 
 BTN_UP = pygame.K_w
 BTN_DOWN = pygame.K_s
